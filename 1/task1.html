@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Домашнее задание №1</title>
+	<link rel="stylesheet" href="css/task1.css">
+	<script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+	<section class="cart1" id="card">
+		<div class="cat" v-for="cart in cats">
+			<h2>Имя: {{ cart.name }}</h2>
+			<p>Возраст: {{ cart.age }}</p>
+			<p>Раскрас: {{ cart.color }}</p>
+			<img v-bind:src="cart.img">
+			<a class="link" href="#">Подробнее</a>
+		</div>
+	</section>
+
+<script src="js/task1.js"></script>
+</body>
+</html>
