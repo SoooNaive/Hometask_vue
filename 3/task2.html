@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8">
+      <title>Домашнее задание 3.2</title>
+      <script src="https://unpkg.com/vue@next"></script>
+   </head>
+   <body>
+      <section id="app">
+         <div v-for="(service, index) in services">
+            <input type="checkbox" :id="index" :value="index" v-model="select">
+            <label :for="index">{{ service.title }} : {{ service.price }}</label>
+         </div>
+         <p>Итого к оплате: {{ sum }}</p>
+      </section>
+   </body>
+   <footer>
+      <script src="js/task2.js"></script>
+   </footer>
+</html>

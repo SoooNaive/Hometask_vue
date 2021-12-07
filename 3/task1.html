@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8">
+      <title>Домашнее задание 3.1</title>
+      <script src="https://unpkg.com/vue@next"></script>
+      <link rel="stylesheet" href="css/task1.css">
+   </head>
+   <body>
+      <section id="app">
+         <input type="text" v-model="request" placeholder="Введите слово">
+        <div>
+			<div v-for="article in results" class="list-article">
+				<img :src="article.image" alt="foto">
+				<p>{{ article.title.toUpperCase() }}</p>
+			</div>
+		</div>
+      </section>
+   </body>
+   <footer>
+      <script src="js/task1.js"></script>
+   </footer>
+</html>

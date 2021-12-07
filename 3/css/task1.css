@@ -1,0 +1,16 @@
+.list-article {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.list-article > img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.list-article > p {
+    line-height: 100px;
+    margin: 0px 10px;
+}
