@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Домашнее задание №2.2</title>
+	<script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="css/task2.css">
+</head>
+<body>
+	<section id="app">
+		<a href="#" class="link" 
+		   v-on:click="gridStyle">Отобразить сеткой</a>
+		<a href="#" class="link" 
+		   v-on:click="listStyle">Отобразить списком</a>
+		<div :class="style">
+			<div v-for="article in articles"
+			:class="{'grid-article': style === 'grid',
+                     'list-article': style === 'list'}">
+				<img :src="article.image" alt="foto">
+				<p>{{ article.title.toUpperCase() }}</p>
+			</div>
+		</div>
+	</section>
+<script src="js/task2.js"></script>
+</body>
+</html>

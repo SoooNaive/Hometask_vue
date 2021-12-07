@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Домашнее задание №2</title>
+	<link rel="stylesheet" href="css/task1.css">
+	<script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+	<section id="app">
+		<div v-for="good in sortedByCount" :key="good.title"
+		     class="con" 
+		     :class="{zero: good.count === 0,
+                     'not-many': (good.count > 0 && good.count < 20),
+                      many: good.count >= 20}">
+			<h2>Название: {{ good.title }}</h2>
+			<p>Цена: {{ good.price }}</p>
+		</div>
+		
+	</section>
+<script src="js/task1.js"></script>
+</body>
+</html>
